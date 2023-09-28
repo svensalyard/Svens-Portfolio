@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: rgb(7, 188, 248);
+}
+
+header {
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    color: rgb(7, 188, 248);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-basis: auto;
+    justify-content: space-around;
+    flex-direction: row;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+nav li {
+ display: inline;
+ padding: 20px;
+ color:rgb(7, 188, 248);
+}
+
+
+
+.starry {
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/pexels-felix.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+main h2 {
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+hr {
+    color: white;
+}
+
+section {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.flex1 {
+    padding: 30px;
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+}
+
+.flex1 p {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.flex1 .snake {
+    height: 350px;
+    box-shadow: 0 0 0 2px white;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 700px;
+    flex-wrap: wrap;
+    flex: 1 0 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.cards {
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 2 1 50px;
+    flex-direction: row;
+}
+ .card {
+    padding: 10px;
+    flex-wrap: wrap;
+    flex: 1 0 50px;
+    text-align: center;
+}
+
+.maincards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 2 1 50px;
+    flex-direction: column;
+    z-index: 1;
+    align-items: center;
+}
+
+.maincard img {
+    width: 100%;
+}
+
+.maincard {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2 1 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+section ul {
+    text-align: center;
+}
+
+section li {
+    display: inline;
+    list-style: none;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0;
+    align-items: center;
+    z-index: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+    color: rgb(7, 188, 248);
+    text-align: center;
+    height: 100px
+}
