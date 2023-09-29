@@ -1,3 +1,20 @@
+/*Consolidated common styles into variables*/
+
+:root {
+    --colorlight: rgb(7, 188, 248);
+    --mainstyle: white;
+    --aligncenter: center;
+    --flex1: flex;
+    --pix20: 20px;
+    --pix10: 10px;
+    --spcbtwn: space-between;
+    --auto: auto;
+    --flxdir-c: column;
+    --wrap: wrap;
+}
+
+/* Code in * tag from the Horiseon first homework*/
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -7,19 +24,22 @@
 
 body {
     background-color: black;
-    color: rgb(7, 188, 248);
+    color: var(--colorlight);
 }
 
+/*Made header/nav stick to the top of the page in desktop mode and align text into a row.*/
+
+/*Thanks to for showing me how to stick the nav bar to the top of the page.*/
 header {
     height: 70px;
     width: 100%;
     margin: 0;
-    background-color: white;
-    color: rgb(7, 188, 248);
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-basis: auto;
+    background-color: var(--mainstyle);
+    color: var(--colorlight);
+    display: var(--flex1);
+    align-items: var(--aligncenter);
+    text-align: var(--aligncenter);
+    flex-basis: var(--auto);
     justify-content: space-around;
     flex-direction: row;
     position: sticky;
@@ -35,28 +55,28 @@ header h1 {
 
 nav li {
  display: inline;
- padding: 20px;
- color:rgb(7, 188, 248);
+ padding: var(--pix20);
+ color:var(--colorlight);
 }
 
-
-
+/* Background image code from the Horiseon first homework*/
+/*Image from https://www.pexels.com/photo/blue-universe-956981/*/
 .starry {
     height: 200px;
     width: 100%;
     background-image: url("../images/pexels-felix.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: var(--aligncenter);
 }
 
 main h2 {
-    padding: 20px;
+    padding: var(--pix20);
     position: relative;
-    text-align: center;
+    text-align: var(--aligncenter);
 }
 
 hr {
-    color: white;
+    color: var(--mainstyle);
 }
 
 section {
@@ -67,59 +87,60 @@ section {
 .flex1 {
     padding: 30px;
     background-color: black;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+    display:var(--flex1);
+    justify-content: var(--spcbtwn);
+    align-items: var(--aligncenter);
     flex-direction: row;
     text-align: left;
 }
 
 .flex1 p {
     padding: 30px;
-    font-size: 20px;
+    font-size: var(--pix20);
 }
 
 .flex1 .snake {
     height: 350px;
-    box-shadow: 0 0 0 2px white;
+    box-shadow: 0 0 0 2px var(--mainstyle);
 }
 
+/* Thanks to https://www.joshwcomeau.com/animation/css-transitions/ For showing me this transformation */
 img:hover {
     transform: scale(1.1);
 }
 
 .card img {
     width: 700px;
-    flex-wrap: wrap;
+    flex-wrap: var(--wrap);
     flex: 1 0 50px;
-    padding: 10px;
-    text-align: center;
+    padding: var(--pix10);
+    text-align: var(--aligncenter);
 }
 
 
 .cards {
     z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: var(--flex1);
+    flex-wrap: var(--wrap);
+    justify-content: var(--spcbtwn);
     flex: 2 1 50px;
     flex-direction: row;
 }
  .card {
-    padding: 10px;
-    flex-wrap: wrap;
+    padding: var(--pix10);
+    flex-wrap: var(--wrap);
     flex: 1 0 50px;
-    text-align: center;
+    text-align: var(--aligncenter);
 }
 
 .maincards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: var(--flex1);
+    flex-wrap: var(--wrap);
+    justify-content: var(--spcbtwn);
     flex: 2 1 50px;
-    flex-direction: column;
+    flex-direction: var(--flxdir-c);
     z-index: 1;
-    align-items: center;
+    align-items: var(--aligncenter);
 }
 
 .maincard img {
@@ -127,81 +148,83 @@ img:hover {
 }
 
 .maincard {
-    display: flex;
-    flex-wrap: wrap;
+    display: var(--flex1);
+    flex-wrap: var(--wrap);
     flex: 2 1 50px;
-    padding: 10px;
-    text-align: center;
+    padding: var(--pix10);
+    text-align: var(--aligncenter);
 }
 
 
 section ul {
-    text-align: center;
+    text-align: var(--aligncenter);
 }
 
 section li {
     display: inline;
     list-style: none;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: var(--spcbtwn);
+    padding: var(--pix20);
     margin: 0;
-    align-items: center;
+    align-items: var(--aligncenter);
     z-index: 1;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    background-color: white;
-    color: rgb(7, 188, 248);
-    text-align: center;
+    display: var(--flex1);
+    flex-direction: var(--flxdir-c);
+    justify-content: var(--aligncenter);
+    align-items: var(--aligncenter);
+    margin-top: var(--pix20);
+    background-color: var(--mainstyle);
+    color: var(--colorlight);
+    text-align: var(--aligncenter);
     height: 100px
 }
 
+/*Thanks to the jquery and responsiveness in class assignment. Code the media screen tags was done by me experimentally.*/
+
 @media screen and (max-height: 1300px) {
     .flex1 {
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        display: flex;
+        justify-content: var(--aligncenter);
+        align-items: var(--aligncenter);
+        align-content: var(--aligncenter);
+        display: var(--flex1);
     }
 }
 
 @media screen and (max-width: 992px) {
     * {
-        flex-wrap: wrap;
+        flex-wrap: var(--wrap);
     }
 
     header h1 {
-        height: auto;
+        height: var(--auto);
     }
 
     header {
         color: black;
         background-color: aqua;
-        height: auto;
+        height: var(--auto);
         position: static;
     }
 
     nav li {
-        flex-direction: column;
-        display: flex;
+        flex-direction: var(--flxdir-c);
+        display: var(--flex1);
     }
     .cards {
-        margin: 10px;
+        margin: var(--pix10);
         margin-left: -10px;
     }
     .card img {
         width: 110%;
-        height: auto;
+        height: var(--auto);
     }
     .contact li {
-        flex-direction: column;
-        display: flex;
-        justify-content: center
+        flex-direction: var(--flxdir-c);
+        display: var(--flex1);
+        justify-content: var(--aligncenter)
     }
 }
 @media screen and (max-width: 768px) {
