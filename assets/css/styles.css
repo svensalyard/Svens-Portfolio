@@ -106,7 +106,7 @@ section {
 
 /* Thanks to https://www.joshwcomeau.com/animation/css-transitions/ For showing me this transformation */
 img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .card img {
@@ -126,7 +126,8 @@ img:hover {
     flex: 2 1 50px;
     flex-direction: row;
 }
- .card {
+
+.card {
     padding: var(--pix10);
     flex-wrap: var(--wrap);
     flex: 1 0 50px;
@@ -180,6 +181,11 @@ footer {
     color: var(--colorlight);
     text-align: var(--aligncenter);
     height: 100px
+}
+
+.marvel {
+    width: 70%;
+    height: auto;
 }
 
 /*Thanks to the jquery and responsiveness in class assignment. Code the media screen tags was done by me experimentally.*/
